@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: grey;
+			animation: back 3s ease-in 0s 1;
+			animation-fill-mode: forwards;
+			background-size: contain;
+		}
+		.container{ 
+			position: absolute;
+		}
+		#note{
+			color: grey;
+		}
+		#not{
+			color: #B13A8F;
+			font-size: 25pt;
+			text-align: center;
+			font-family: cursive;
+		}
+		#note p{
+			animation: exp 2.5s ease-out 0s 1;
+			animation-fill-mode: forwards;
+		}
+		.error{
+			position:relative;
+			animation: err 3s ease-out 0s 1;
+			animation-fill-mode: forwards;
+			color: white;
+			padding: 0.5rem 1.2rem;
+			background-color: #A13AB1;
+			border:1px solid black;
+			border-radius: 7px;
+		}
+		.no{
+			font-size: 20pt;
+			font-family: 'serif'; 
+		}
+		.four{
+			display: inline-block;
+			animation: four 1.2s ease-in 2.5s 1;
+		}
+		.four2{
+			display: inline-block;
+			animation: four2 1.2s ease-in 2.5s 1;
+		}
+		.zero{
+			display: inline-block;
+			position: relative;
+			animation: zer 0.8s ease-out 3.5s infinite alternate;
+			animation-fill-mode: forwards;
+		}
+		@keyframes err{
+			0%{ left:0; top:0vh; }
+			25%{ left:45vw;top: 0vh; background-color: #B13A8F }
+			50%{ left:45vw;top: 20vh;background-color: #B13A62 }
+			100%{ left:45vw;top: 45vh;background-color:#B13A3A ;}
+		}
+		@keyframes exp{
+			0%{ font-size: 50pt }
+			25%{ font-size: 100pt }
+			50%{ font-size: 150pt }
+			100%{ font-size: 300pt}
+		}
+		@media screen and (min-width: 1014px){
+			@keyframes exp{
+				0%{ font-size: 50pt }
+				25%{ font-size: 100pt }
+				50%{ font-size: 150pt }
+				100%{ font-size: 500pt}
+			}
+		}
+		@keyframes back{
+			from { background-color:grey; }
+			to{ background-color: red; }
+		}
+		@keyframes four{
+			0% { -webkit-transform:rotate(0) }
+			50%{ -webkit-transform:rotate(-45deg) }
+			100% { -webkit-transform:rotate(0) }
+		}
+		@keyframes four2{
+			0% { -webkit-transform:rotate(0) }
+			50%{ -webkit-transform:rotate(45deg) }
+			100% { -webkit-transform:rotate(0) }
+		}
+		@keyframes zer{
+			from { bottom:0px }
+			to{ bottom: 1000px }
+		}
+	</style>
+</head>
+<body>
+	<div class="cont">
+		<div class="container">
+			<div class="error">
+				<span class="no" id="req">Request</span>
+			</div>
+		</div>
+		<div id="note"></div>
+		<div id="not"></div>
+	</div>
+	<script type="text/javascript">
+		setTimeout(function(){
+			const req = document.getElementsByClassName('error')[0];
+			req.style.display = "none";
+				document.getElementById("note").innerHTML += "<p style='text-align:center'><span class='four'>4</span><span class='zero'>0</span><span class='four2'>4</span></p>"
+		},3000);
+
+		setTimeout(function(){
+			document.getElementById("not").innerHTML = "Page Not Found";
+			document.getElementsByTagName('body')[0].style.backgroundImage = 'url(baby.jpg)';
+		},7500)
+	</script>
+</body>
+</html>
