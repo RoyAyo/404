@@ -70,9 +70,9 @@
 			50%{ font-size: 150pt }
 			100%{ font-size: 300pt}
 		}
-		@media screen and (max-width: 1014px){
+		@media screen and (max-width: 600px){
 			#note{
-			    padding-top:40rem;
+			    padding-top:50rem;
 			}
 		}
 		@media screen and (min-width: 1014px){
@@ -124,6 +124,7 @@
 			document.getElementById("not").innerHTML = "Page Not Found";
 			document.getElementsByTagName('body')[0].style.backgroundImage = 'url(baby.jpg)';
 			document.getElementsByTagName('body')[0].style.backgroundSize = 'cover';
+			document.getElementsByTagName('body')[0].style.backgroundRepeat = 'no-repeat';
 			document.getElementsByTagName('body')[0].style.backgroundColor = 'transparent';
 		},7500)
 	</script>
